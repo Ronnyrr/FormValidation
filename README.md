@@ -4,10 +4,20 @@ Plain Javascript for validating forms based on CSS class.
 
 # Usage
 
+Single form element
+
 ```javascript
-const formElems = document.querySelectorAll('.contact-form');
-for (let i = 0; i < formElems.length; i++) {
-	const inputs = formElems[i].querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], select, textarea');
-	new FormValidation(formElems[i], inputs);
+const formElement = document.querySelectorAll('.form');
+const inputElements = formElement.querySelectorAll('input, select, textarea, button');
+new FormValidation(formElement, inputElements);
+```
+
+Multiple form elements
+
+```javascript
+const formElements = document.querySelectorAll('.form');
+for (let i = 0; i < formElements.length; i++) {
+	const inputElements = formElements[i].querySelectorAll('input, select, textarea, button');
+	new FormValidation(formElements[i], inputElements);
 }
 ```

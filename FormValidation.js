@@ -2,7 +2,7 @@ export default class FormValidation {
 	constructor(form, fields) {
 		this.el = form;
 		this.fields = fields;
-		this.submitElem = this.el.querySelector('input[type="submit"]');
+		this.submitElem = this.el.querySelector('[type="submit"]');
 
 		this.formError = false;
 
