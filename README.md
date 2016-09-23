@@ -7,7 +7,7 @@ Plain Javascript for validating forms based on CSS class.
 Single form element
 
 ```javascript
-const formElement = document.querySelectorAll('.form');
+const formElement = document.querySelector('.form');
 const inputElements = formElement.querySelectorAll('input, select, textarea, button');
 new FormValidation(formElement, inputElements);
 ```
